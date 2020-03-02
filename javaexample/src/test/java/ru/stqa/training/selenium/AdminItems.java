@@ -28,7 +28,7 @@ public class AdminItems {
         List<WebElement> allElements = driver.findElements(By.cssSelector("ul#box-apps-menu li#app-"));
         int allElementOnPage = allElements.size();
         for (int i = 0; i <= allElementOnPage; i++) {
-            WebElement item = driver.findElement(By.xpath(".//span[@class='name']"));
+            WebElement item = driver.findElement(By.xpath("./ul[@class='box-apps-menu']/li[@id]"+ i + "]"));
             item.click();
             List<WebElement> allDocs = driver.findElements(By.xpath("./ul[@class='docs']/li[@id]"));
             int allDocsOnPage = allDocs.size();
